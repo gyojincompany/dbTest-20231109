@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>486</width>
+    <height>390</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>84</x>
+      <y>20</y>
+      <width>301</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>휴먼엑스포</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(82, 137, 255);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>회원 가입 프로그램</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>94</x>
+      <y>104</y>
+      <width>56</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ID :</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="memberid_edit">
+    <property name="geometry">
+     <rect>
+      <x>174</x>
+      <y>100</y>
+      <width>211</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>94</x>
+      <y>140</y>
+      <width>56</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PASS :</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="memberpw_edit">
+    <property name="geometry">
+     <rect>
+      <x>174</x>
+      <y>130</y>
+      <width>211</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="name_edit">
+    <property name="geometry">
+     <rect>
+      <x>174</x>
+      <y>160</y>
+      <width>211</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>94</x>
+      <y>164</y>
+      <width>56</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>NAME :</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="phone_edit">
+    <property name="geometry">
+     <rect>
+      <x>174</x>
+      <y>190</y>
+      <width>211</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>94</x>
+      <y>194</y>
+      <width>56</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PHONE :</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="address_edit">
+    <property name="geometry">
+     <rect>
+      <x>174</x>
+      <y>220</y>
+      <width>211</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>69</x>
+      <y>220</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ADDRESS :</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>68</x>
+      <y>250</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>AGE :</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="age_edit">
+    <property name="geometry">
+     <rect>
+      <x>174</x>
+      <y>250</y>
+      <width>211</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="join_btn">
+    <property name="geometry">
+     <rect>
+      <x>128</x>
+      <y>307</y>
+      <width>101</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>회원가입</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="reset_btn">
+    <property name="geometry">
+     <rect>
+      <x>244</x>
+      <y>307</y>
+      <width>101</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>초기화</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="idcheck_btn">
+    <property name="geometry">
+     <rect>
+      <x>394</x>
+      <y>100</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ID CHECK</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>486</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
