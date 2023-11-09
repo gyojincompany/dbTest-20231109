@@ -15,7 +15,8 @@ class MainWindow(QMainWindow, form_class):
         self.setWindowTitle("회원조회프로그램")
 
         self.search_btn.clicked.connect(self.db_search) # 조회 버튼 클릭시 db_search 함수 호출
-        # self.modify_btn.clicked.connect(self.db_modify) # 조회 버튼 클릭시 db_modify 함수 호출
+        self.modify_btn.clicked.connect(self.db_modify) # 조회 버튼 클릭시 db_modify 함수 호출
+        self.reset_btn.clicked.connect(self.reset)  # 조회 버튼 클릭시 reset 함수 호출
 
     def db_search(self):
         memberid = self.memberid_edit.text() # 회원아이디로 입력된 아이디 텍스트 가져오기
@@ -28,6 +29,9 @@ class MainWindow(QMainWindow, form_class):
         cur.execute(sql)  # SQL문 실행
 
         result = cur.fetchone()
+
+        cur.close()
+        conn.close()
         # print(result)
         if result != None:
             self.memberpw_edit.setText(result[1])
@@ -42,6 +46,35 @@ class MainWindow(QMainWindow, form_class):
             self.phone_edit.setText('회원정보없음')
             self.address_edit.setText('회원정보없음')
             self.age_edit.setText('회원정보없음')
+
+    def db_modify(self):
+        memberid = self.memberid_edit.text() # 회원아이디로 입력된 아이디 텍스트 가져오기
+        memberpw = self.memberpw_edit.text() # 회원비밀번호 텍스트 가져오기
+        name = self.name_edit.text() # 회원비밀번호 텍스트 가져오기
+        phone = self.phone_edit.text() # 회원전화번호 텍스트 가져오기
+        address = self.address_edit.text() # 회원주소 텍스트 가져오기
+        age = self.age_edit.text() # 회원나이 텍스트 가져오기
+
+        conn = pymysql.connect(host='localhost', user='root', password='12345', db='memberdb')
+
+        sql = f"UPDATE member SET memberpw='{memberpw}',name='{name}',phone='{phone}',address='{address}',memberage={age} WHERE memberid='{memberid}'"
+
+        cur = conn.cursor()  # 커서 생성
+        cur.execute(sql)  # SQL문 실행
+
+        cur.close()
+        conn.commit()
+        conn.close()
+
+        self.db_search() # 다시 데이터 갱신
+
+    def reset(self):
+        self.memberid_edit.clear()
+        self.memberpw_edit.clear()
+        self.name_edit.clear()
+        self.phone_edit.clear()
+        self.address_edit.clear()
+        self.age_edit.clear()
 
 
 if __name__== '__main__':

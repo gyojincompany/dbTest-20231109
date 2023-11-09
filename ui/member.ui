@@ -190,14 +190,27 @@
    <widget class="QPushButton" name="modify_btn">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>330</y>
+      <x>210</x>
+      <y>320</y>
       <width>111</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
      <string>회원정보수정</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="reset_btn">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>320</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>초기화</string>
     </property>
    </widget>
   </widget>
