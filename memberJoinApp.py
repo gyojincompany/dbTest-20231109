@@ -8,7 +8,7 @@ from PyQt5.QtGui import *
 
 import pymysql
 
-form_class = uic.loadUiType("ui/join2.ui")[0]
+form_class = uic.loadUiType("ui/member3.ui")[0]
 
 class MainWindow(QMainWindow, form_class):
     def __init__(self):
